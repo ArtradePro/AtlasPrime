@@ -1,0 +1,26 @@
+{
+  "name": "atlas-prime",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "dev:web": "turbo run dev --filter=atlas-web",
+    "dev:scraper": "turbo run dev --filter=atlas-scraper",
+    "convex:dev": "cd apps/web && npx convex dev"
+  },
+  "devDependencies": {
+    "turbo": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "convex": "^1.31.7"
+  }
+}
